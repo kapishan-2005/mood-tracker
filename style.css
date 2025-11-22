@@ -103,6 +103,44 @@
 /* ------------------------------
    HERO TITLE
 --------------------------------*/
+.stage {
+    perspective: 900px; /* increase for less foreshortening */
+  }
+
+  /* wrapper preserves 3D and animates */
+  .card {
+    width: 320px;
+    height: 320px;
+    transform-style: preserve-3d;
+    animation: spin3d 6s linear infinite;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(2,6,23,0.8);
+    overflow: hidden;
+    background: #111827;
+  }
+
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    backface-visibility: hidden; /* helps with artifacts during rotation */
+    transform: translateZ(40px) scale(1.02); /* small pop-out effect */
+    will-change: transform;
+  }
+
+  @keyframes spin3d {
+    0%   { transform: rotateX(10deg) rotateY(0deg) rotateZ(0deg); }
+    25%  { transform: rotateX(10deg) rotateY(90deg) rotateZ(0deg); }
+    50%  { transform: rotateX(10deg) rotateY(180deg) rotateZ(0deg); }
+    75%  { transform: rotateX(10deg) rotateY(270deg) rotateZ(0deg); }
+    100% { transform: rotateX(10deg) rotateY(360deg) rotateZ(0deg); }
+  }
+
+  /* small responsive tweak */
+  @media (max-width:400px){
+    .card { width: 260px; height: 260px; }
+  }
 .hero-title {
     margin-top: 40px;
     font-size: 80px;
