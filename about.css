@@ -1,0 +1,59 @@
+/* Custom Navbar Styling */
+.custom-navbar {
+    background-color: #091a27; 
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.custom-navbar .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+/* Hero Section (Gradient Background) */
+.hero-section {
+    background: linear-gradient(90deg, #091a27 0%, #204c66 100%); 
+    min-height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Section Headings */
+.section-title {
+    font-weight: 700;
+    color: #091a27; /* Dark blue/black for contrast */
+}
+
+/* Tools Used Section Background */
+.custom-bg-section {
+    background-color: #f8f9fa; /* Light grey background for emphasis */
+    padding: 60px 0;
+    border-radius: 8px;
+}
+
+/* Icon Styling for Core Values and Tools */
+.icon-blue-large {
+    font-size: 3.5rem;
+    color: #007bff; /* Primary blue color */
+}
+
+/* Team Card Styling */
+.team-card {
+    transition: transform 0.3s ease;
+    border: 1px solid #dee2e6;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem !important;
+    }
+}

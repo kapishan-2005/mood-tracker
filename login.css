@@ -1,0 +1,148 @@
+/* General Layout and Reset */
+.min-vh-100 {
+  min-height: 100vh;
+}
+
+/* LEFT PANEL STYLING (Dark Gradient) */
+.left-panel {
+  /* Custom gradient matching the image */
+  background: linear-gradient(145deg, #091a27 0%, #0d3569 50%, #000158 100%);
+  color: white;
+  padding: 60px;
+  text-align: left;
+}
+
+.left-panel .text-content {
+  /* Position text block relative to the top left of the panel */
+  max-width: 450px;
+  position: absolute; /* Needed for precise placement */
+  top: 50%;
+  left: 50%;
+  transform: translate(-70%, -50%); /* Center based on content size */
+}
+
+.left-panel .logo {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  letter-spacing: 2px;
+}
+
+.left-panel h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.left-panel p {
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+
+/* Positioning for the Create Account Card (The floating effect) */
+.create-account-card {
+  position: absolute;
+  top: 50%; /* Vertical center */
+  right: -150px; /* Overlaps 150px into the right panel */
+  transform: translateY(-50%); /* Fine-tune vertical centering */
+  z-index: 10; /* Ensures it sits above the right panel */
+  /* Shared card styles below */
+  /* border: none;
+    border-radius: 8px; */
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  width: 280px;
+}
+
+/* RIGHT PANEL STYLING (Forms) */
+.right-panel {
+  background-color: #f8f9fa; /* Slight off-white background for contrast */
+}
+
+/* Login Card Styling (Centering is handled by Bootstrap d-flex classes) */
+.login-card {
+  border: none;
+  border-radius: 8px;
+  width: 280px; /* Fixed width for the cards */
+}
+
+/* Common Card and Form Element Styling */
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+.form-label.small {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #495057;
+}
+
+/* Button Styling */
+.custom-blue-btn {
+  background-color: #007bff;
+  border-color: #007bff;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 10px 0;
+}
+
+.google-btn {
+  color: #4a4a4a;
+  border-color: #ced4da;
+  border-radius: 6px;
+  font-weight: 500;
+  background-color: #fff;
+  padding: 10px 0;
+}
+
+.toggle-password {
+  border-left: 0;
+  background-color: #f8f9fa;
+}
+
+.custom-link {
+  color: #007bff;
+  font-weight: 500;
+}
+
+.small-link {
+  font-size: 0.85rem;
+}
+
+/* RESPONSIVE DESIGN (For Mobile) */
+@media (max-width: 767px) {
+  .left-panel {
+    /* Hide the large branding panel on small screens for better form visibility */
+    display: none;
+  }
+
+  .create-account-card {
+    /* Hide the overlapping card on mobile */
+    display: none !important;
+  }
+
+  .right-panel {
+    /* Centering the login card takes over the screen */
+    width: 100%;
+  }
+
+  .login-card {
+    width: 90%; /* Make cards wider on mobile */
+    max-width: 350px;
+  }
+}
