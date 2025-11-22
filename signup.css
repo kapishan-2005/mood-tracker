@@ -1,0 +1,158 @@
+/* Import a modern font like Poppins */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --- Layout and Backgrounds --- */
+
+/* Ensures the body/container covers the full viewport height */
+.container-fluid {
+    padding: 0;
+}
+
+/* Left Panel Styling */
+.left-panel {
+    /* Base dark blue color */
+    background-color: #0d1a3c; 
+    /* Gradient overlay for a richer look (optional, but similar to the image) */
+    background: linear-gradient(145deg, #091a27 0%, #0d3569 50%, #000158 100%);
+    padding: 5rem 2rem;
+}
+
+.logo-text {
+    font-size: 1.25rem; /* Larger than default paragraph */
+    opacity: 0.8; /* Slightly subdued */
+    margin-bottom: 2rem;
+}
+
+.sign-up-title {
+    font-size: 4.5rem; /* Large and bold */
+    line-height: 1.1;
+}
+
+.start-journey-text {
+    font-weight: 400;
+}
+
+/* Right Panel Styling */
+.right-panel {
+    /* Simple white background for contrast */
+    background-color: #f8f9fa;
+}
+
+/* --- Form Card Styling --- */
+
+.custom-card {
+    /* Set the form container size */
+    width: 100%;
+    max-width: 450px; 
+     background: linear-gradient(145deg, #0c80d8 0%, #12468a 50%, #0f12d3 100%);
+      backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+    
+}
+
+.create-account-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+/* --- Input and Button Styling --- */
+
+/* Custom Input Fields */
+.custom-input {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+    color: white; /* Text color */
+    padding: 1rem 1.25rem;
+    border-radius: 0.75rem; /* More rounded */
+}
+
+/* Placeholder text color */
+.custom-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Focus state: remove Bootstrap's default blue ring and use a subtle white one */
+.custom-input:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Primary Button (Create account) */
+.custom-btn-primary {
+    /* Bright blue color from the image */
+    background-color: #007bff; 
+    border-color: #007bff;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    transition: background-color 0.2s;
+}
+
+.custom-btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+/* Secondary Button (Continue with Google) */
+.custom-btn-secondary {
+    /* Outline button with dark blue text/border */
+    color: white;
+    border-color: rgba(255, 255, 255, 0.4);
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    background-color: transparent; /* Ensure transparent background */
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.custom-btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover background */
+    border-color: white;
+    color: white;
+}
+
+/* Login link text */
+.already-account-text {
+    color: rgba(255, 255, 255, 0.7); /* Slightly light grey */
+    font-size: 0.95rem;
+}
+
+.log-in-link {
+    color: white; /* Pure white for emphasis */
+    text-decoration: none; /* Remove underline */
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.log-in-link:hover {
+    color: #007bff; /* Hover color */
+}
+
+/* --- Responsiveness for Mobile --- */
+@media (max-width: 991.98px) {
+    /* On smaller screens, stack the panels */
+    .left-panel {
+        /* Make the left panel smaller on mobile */
+        padding: 3rem 1rem;
+        text-align: center;
+    }
+    .left-panel .text-start {
+        text-align: center !important;
+        width: 100%;
+    }
+    .sign-up-title {
+        font-size: 3rem; /* Smaller title on mobile */
+    }
+    .right-panel {
+        /* Ensure form is centered and has padding */
+        padding: 3rem 1rem;
+    }
+}

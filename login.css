@@ -1,148 +1,92 @@
-/* General Layout and Reset */
-.min-vh-100 {
-  min-height: 100vh;
+/* Ensure the body and html take up the full viewport height */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif; /* Adjusted font for a more modern feel */
 }
 
-/* LEFT PANEL STYLING (Dark Gradient) */
+/* Main container to hold the two halves */
+.login-container {
+    height: 100vh; /* Full viewport height */
+    padding: 0;
+}
+
+/* --- Left Panel Styling (Dark Side) --- */
 .left-panel {
-  /* Custom gradient matching the image */
-  background: linear-gradient(145deg, #091a27 0%, #0d3569 50%, #000158 100%);
-  color: white;
-  padding: 60px;
-  text-align: left;
+    background-color: #0b112c; /* Base dark color */
+    position: relative;
+    overflow: hidden;
 }
 
-.left-panel .text-content {
-  /* Position text block relative to the top left of the panel */
-  max-width: 450px;
-  position: absolute; /* Needed for precise placement */
-  top: 50%;
-  left: 50%;
-  transform: translate(-70%, -50%); /* Center based on content size */
+/* Gradient Overlay for the Left Panel (mimics the dark-to-transparent effect) */
+.left-panel::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* Create the dark blue to lighter blue gradient/shadow effect */
+    background: linear-gradient(145deg, #091a27 0%, #0d3569 50%, #000158 100%);
+     z-index: 1; /* Keep the gradient above the background, below the text */
+    opacity: 0.9;
 }
 
-.left-panel .logo {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 3rem;
-  letter-spacing: 2px;
+.left-panel > div {
+    /* Put the text above the gradient overlay */
+    z-index: 2; 
+    position: relative;
 }
 
-.left-panel h1 {
-  font-size: 5rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
+/* --- Right Panel Styling (Light Side) --- */
+.right-panel {
+    background-color: #f7f9fc; /* Very light, almost white background */
 }
 
-.left-panel p {
-  font-size: 1.5rem;
-  opacity: 0.8;
-}
-
-/* Positioning for the Create Account Card (The floating effect) */
-.create-account-card {
-  position: absolute;
-  top: 50%; /* Vertical center */
-  right: -150px; /* Overlaps 150px into the right panel */
-  transform: translateY(-50%); /* Fine-tune vertical centering */
-  z-index: 10; /* Ensures it sits above the right panel */
-  /* Shared card styles below */
-  /* border: none;
-    border-radius: 8px; */
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+/* --- Login Card Styling (Glassmorphism Effect) --- */
+.login-card {
+    /* Base color for the glass effect (white with low opacity) */
+    background: linear-gradient(145deg, #0c80d8 0%, #12468a 50%, #0f12d3 100%);
+      backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
-  width: 280px;
+    max-width: 450px;
+    width: 90%;
 }
 
-/* RIGHT PANEL STYLING (Forms) */
-.right-panel {
-  background-color: #f8f9fa; /* Slight off-white background for contrast */
+/* Custom Primary Button Color to match the screenshot */
+.custom-btn-primary {
+    background-color: #007bff; /* Standard Bootstrap blue, adjust if needed */
+    border-color: #007bff;
+    font-weight: bold;
 }
 
-/* Login Card Styling (Centering is handled by Bootstrap d-flex classes) */
-.login-card {
-  border: none;
-  border-radius: 8px;
-  width: 280px; /* Fixed width for the cards */
+.custom-btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
 }
 
-/* Common Card and Form Element Styling */
-.card-body {
-  padding: 20px;
-}
-
-.card-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
+/* Style the form inputs for a cleaner look */
 .form-control {
-  border-radius: 6px;
-  padding: 8px 12px;
+     background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+    color: white; /* Text color */
+    padding: 1rem 1.25rem;
+    border-radius: 0.75rem;
 }
 
-.form-label.small {
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: #495057;
+.form-control::placeholder {
+ color: rgba(255, 255, 255, 0.6);
 }
-
-/* Button Styling */
-.custom-blue-btn {
-  background-color: #007bff;
-  border-color: #007bff;
-  font-weight: 600;
-  border-radius: 6px;
-  padding: 10px 0;
+.form-control:focus{
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
 }
-
-.google-btn {
-  color: #4a4a4a;
-  border-color: #ced4da;
-  border-radius: 6px;
-  font-weight: 500;
-  background-color: #fff;
-  padding: 10px 0;
-}
-
-.toggle-password {
-  border-left: 0;
-  background-color: #f8f9fa;
-}
-
-.custom-link {
-  color: #007bff;
-  font-weight: 500;
-}
-
-.small-link {
-  font-size: 0.85rem;
-}
-
-/* RESPONSIVE DESIGN (For Mobile) */
-@media (max-width: 767px) {
-  .left-panel {
-    /* Hide the large branding panel on small screens for better form visibility */
-    display: none;
-  }
-
-  .create-account-card {
-    /* Hide the overlapping card on mobile */
-    display: none !important;
-  }
-
-  .right-panel {
-    /* Centering the login card takes over the screen */
-    width: 100%;
-  }
-
-  .login-card {
-    width: 90%; /* Make cards wider on mobile */
-    max-width: 350px;
-  }
+.sign-up-link {
+    color: white; /* Use primary blue for the link */
+    font-weight: 600;
 }
