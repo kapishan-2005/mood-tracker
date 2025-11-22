@@ -40,7 +40,7 @@ html, body {
 
 /* --- Right Panel Styling (Light Side) --- */
 .right-panel {
-    background-color: #f7f9fc; /* Very light, almost white background */
+    background: rgba(0, 15, 30, 0.65); /* Very light, almost white background */
 }
 
 /* --- Login Card Styling (Glassmorphism Effect) --- */

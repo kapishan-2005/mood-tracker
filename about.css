@@ -1,6 +1,13 @@
 /* Custom Navbar Styling */
+body{
+    background:rgba(0, 15, 30, 0.65);
+}
+#tools{
+        background: linear-gradient(145deg, #091a27 0%, #0d3569 50%, #000158 100%);
+
+}
 .custom-navbar {
-    background-color: #091a27; 
+    background: linear-gradient(120deg, #031b3f 0%, #0c0032 100%);
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -43,14 +50,22 @@
 /* Team Card Styling */
 .team-card {
     transition: transform 0.3s ease;
-    border: 1px solid #dee2e6;
+      background: linear-gradient(145deg, #0c80d8 0%, #12468a 50%, #0f12d3 100%);
+      backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+    
 }
 
 .team-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !important;
 }
-
+.foot{
+    background: linear-gradient(120deg, #031b3f 0%, #0c0032 100%);
+}
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .hero-section h1 {
