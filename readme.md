@@ -80,7 +80,9 @@ The goal is to develop:
 /EmotionSpot-AI
 │── index.html
 │── contact.html
-│── aboutus.html
+│── contact.css
+│── About.html
+│── about.css
 │── login.html
 │── signup.html
 │── style.css
