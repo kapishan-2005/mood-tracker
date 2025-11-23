@@ -6,6 +6,10 @@ body{
         background: linear-gradient(145deg, #091a27 0%, #0d3569 50%, #000158 100%);
 
 }
+.home-icon {
+    color: white;
+}
+
 .custom-navbar {
     background: linear-gradient(120deg, #031b3f 0%, #0c0032 100%);
     padding-top: 15px;
@@ -65,6 +69,54 @@ body{
 }
 .foot{
     background: linear-gradient(120deg, #031b3f 0%, #0c0032 100%);
+}
+/* Custom Styles for the Navbar */
+
+/* 1. Navbar Background */
+.custom-navbar {
+    background-color: #0d1e37; /* A deep, dark blue/gray for a tech feel */
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* 2. Logo Text Style */
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700; /* Bold */
+    letter-spacing: 0.5px;
+}
+
+/* 3. Navigation Link Style */
+.nav-item-link {
+    font-size: 1.1rem;
+    margin: 0 10px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.nav-item-link:hover {
+    color: #ffffff !important; /* White color on hover */
+    opacity: 1;
+}
+
+/* 4. Toggler/Hamburger Icon Color */
+.custom-toggler .navbar-toggler-icon {
+    /* To make the hamburger lines visible on a dark background */
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* 5. Centering Fix for Bootstrap (Required to use mx-auto effectively) */
+/* On large screens, this ensures the nav links are only as wide as their content */
+@media (min-width: 992px) {
+    .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+    }
+    
+    .navbar-collapse > .mx-auto {
+        /* Set max-width for the centered element to keep it centered and tight */
+        max-width: fit-content;
+    }
 }
 /* Responsive adjustments */
 @media (max-width: 768px) {

@@ -3,8 +3,20 @@ html, body {
     height: 100%;
     margin: 0;
     font-family: Arial, sans-serif; /* Adjusted font for a more modern feel */
+     overflow: hidden; /* Stop scrolling */
 }
-
+.home-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 30px;
+            color: white;
+            z-index: 1000;
+            text-decoration: none;
+        }
+ .home-icon:hover {
+            color: #0d6efd;
+        }
 /* Main container to hold the two halves */
 .login-container {
     height: 100vh; /* Full viewport height */
