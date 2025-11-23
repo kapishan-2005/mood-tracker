@@ -194,7 +194,9 @@
   font-weight: 600;
   transition: all 0.3s ease;
 }
-
+.explore-btn.a{
+    text-decoration: none;
+}
 .explore-btn:hover {
   background: #a855f7;
   color: #fff;
