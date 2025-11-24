@@ -10,7 +10,18 @@ body {
     color: #fff;
     overflow-x: hidden;
 }
-
+.home-icon {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 32px;
+            color: white;
+            transition: 0.3s;
+        }
+        .home-icon:hover {
+            color: #0056b3;
+            transform: scale(1.1);
+        }
 /* Section Title */
 .contact-title {
     text-align: center;

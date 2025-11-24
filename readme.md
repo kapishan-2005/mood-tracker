@@ -1,91 +1,92 @@
 # EmotionSpot AI – Mood & Emotion Detection Website
 
-This project is a frontend web application designed to provide an AI-supported emotion detection platform.  
-The current version is built using **HTML, CSS, Bootstrap, and Font Awesome** only.  
-JavaScript and AI models will be added in future updates.
+**Live Demo:** [GitHub Pages Link](https://github.com/kapishan-2005/mood-tracker)
 
 ---
 
-## 👥 Team Members & Contributions
+## 🎯 Scenario Chosen
 
-### **1. Ronishan**
-- Developed main UI pages:
-  - `index.html`
-  - `contact.html`
-  - `contact.css`
-  - `style.css`
-- Responsible for homepage layout, hero section, navigation bar, footer, and contact design.
-
-### **2. Kapishan**
-- Developed user-related pages:
-  - `Login.html`
-  - `login.css`
-  - `signup.html`
-  - `signup.css`
-  - `About.html`
-  - `about.css`
-- Focused on form design, card layouts, and About Us content structure.
+**Scenario:**  
+A modern, user-friendly AI-powered emotion detection platform that provides real-time mood analysis and insights.  
+The project focuses on creating a **frontend-ready prototype** with responsive design, forms, and layouts, preparing for future AI integration.
 
 ---
 
-## 📌 Project Description
+## 🎨 Color Palette & Font Selection
 
-EmotionSpot AI is a modern, clean, and user-friendly emotion detection website.  
-Currently, it contains static UI pages as a foundation for future AI integration.
+**Primary Colors:**  
+- Blue Shades: `#1E90FF`, `#4682B4`  
+- Accent: `#00CED1`  
+- Background: `#F5F5F5`  
+- Text: `#333333`  
 
-The goal is to develop:
-- Real-time mood & emotion detection using camera input  
-- AI-powered facial analysis  
-- Login & signup authentication system  
-- Dashboard for user insights  
+**Fonts:**  
+- **Headings:** ` Montserrat, Sora, Bebas Neue`  
+- **Body Text:** `  Poppins, Inter, Nunito, Roboto, Plus Jakarta Sans`  
 
----
-
-## ✨ Features (Current Version)
-
-- Fully responsive UI with Bootstrap  
-- Clean and modern layout  
-- Navigation bar + footer  
-- Contact page with form  
-- Login and Signup pages  
-- About Us information  
-- Font Awesome icons  
-- AI-ready UI models (placeholders for future features)
+> *These colors are chosen for a calming and professional aesthetic suitable for mood/emotion tracking.*
 
 ---
 
-## 🚀 Future Plans (Upcoming Features)
+## ✨ Features List
 
-- Add JavaScript functionality  
-- Add AI model for real-time emotion detection  
-- Integrate camera access  
-- Add database for login/signup  
-- Add Flask/Python backend  
-- Add charts and dashboard analytics  
+- Responsive UI with **Bootstrap 5**  
+- Homepage with hero section and navigation bar  
+- Login & Signup pages with forms  
+- About Us page  
+- Contact page with a functional form  
+- Footer and consistent layout across pages  
+- Font Awesome icons for interactive elements  
+
+- **AI-ready placeholders** for future emotion detection functionality  
 
 ---
 
-## 🛠️ Technologies Used
+## ✅ Component Checklist Confirmation
 
-- **HTML5**
-- **CSS3**
-- **Bootstrap 5**
-- **Font Awesome**
-- (JavaScript, Python, AI Models – *Planned for future updates*)
+| Component                  | Status       |
+|-----------------------------|-------------|
+| Navigation Bar              | ✅ Completed |
+| Hero Section (Homepage)     | ✅ Completed |
+| Login Form                  | ✅ Completed |
+| Signup Form                 | ✅ Completed |
+| About Us Section            | ✅ Completed |
+| Contact Form                | ✅ Completed |
+| Footer                      | ✅ Completed |
+| Responsive / Mobile Design  | ✅ Completed |
+| Font Awesome Icons          | ✅ Completed |
+| AI Integration Placeholder  | ✅ Completed |
+
+---
+
+## 📸 Screenshots
+
+### **Login Page**
+![Login Page](screenshots/login.png)
+
+### **Home Page**
+![Home Page](screenshots/home.png)
+
+### **About Page**
+![About Page](screenshots/about.png)
+
+
+> *Replace the above paths with your actual screenshot files.*
 
 ---
 
 ## 📂 Folder Structure
 
-/EmotionSpot-AI
 │── index.html
 │── contact.html
 │── contact.css
 │── About.html
 │── about.css
 │── login.html
-│── signup.html
-│── style.css
 │── login.css
-│── images
+│── signup.html
+│── signup.css
+│── style.css
+│── images/
+│── screenshots/
 │── README.md
